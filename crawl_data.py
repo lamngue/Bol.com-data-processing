@@ -6,18 +6,22 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException, ElementClickInterceptedException, TimeoutException
 from time import sleep
 from random import randint
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from webdriver_manager.firefox import GeckoDriverManager
+
 
 import pandas as pd
 import os
-# os.environ['PATH'] += 'C:/Users/User/OneDrive/Documents/personal project/personal project/geckodriver.exe'
+os.environ['PATH'] += 'C:/Users/User/OneDrive/Documents/Bol_Data_Processing/geckodriver.exe'
+# C:\Users\User\OneDrive\Documents\Bol_Data_Processing\geckodriver.exe
 url = 'https://www.bol.com'
 
 current_dir = os.getcwd()
 
-driver = Firefox()
+driver = Firefox(service=FirefoxService(GeckoDriverManager().install()))
 driver.get(url)
 
-cookies_dialog = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "js-first-screen-accept-all-button")))
+cookies_dialog = WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.ID, "js-first-screen-accept-all-button")))
 cookies_dialog.click()
 sleep(randint(3, 6))
 
@@ -39,26 +43,39 @@ def get_product_subcategories(target_product):
     subcategory_items = ul_element.find_elements(By.TAG_NAME, 'li')
     subcategories = []
     # Skipping a few categories due to different html format
-    for i in range(1, len(subcategory_items)):
+    for i in range (len(subcategory_items)):
         subcategory_link = subcategory_items[i].find_element(By.TAG_NAME, 'a')
         subcategory_name = subcategory_link.get_attribute('text').strip()
-        if (subcategory_name not in ['Telefonieaccessoires', 'Tablets', 'Tabletaccessoires', 'Tassen & Hoezen', 'Dataopslag', 'PC-Gaming', 'Netwerk & Internet','PC-Accessoires']):
-        # if (subcategory_name in ['Beamers', 'Software', 'Componenten & Onderdelen']):
+        # if (subcategory_name not in ['Telefonieaccessoires', 'Tablets', 'Tabletaccessoires', 'Tassen & Hoezen', 'Dataopslag', 'PC-Gaming', "Printers & Supplies", 'Netwerk & Internet','PC-Accessoires']):
+        if (subcategory_name in ['Smartphones', 'Tablets', 'Vaste telefoons']):
             subcategories.append(subcategory_name)
 
     return subcategories
-subcategories = get_product_subcategories('Computers & Accessoires')
+subcategories = get_product_subcategories('Telefonie & Tablets')
 print(subcategories)
 
 def navigate_to_category(category, subcategory):
+    print('Category', category)
+    home = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.omniture_main_logo')))
+    home.click()
+    sleep(3)
+
     categorie_menu = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".js_category_menu_button")))
+
     categorie_menu.click()
 
-    computer_elektronica = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'li[data-nav-id="3"]')))        
+    computer_elektronica = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'li[data-nav-id="3"]')))  
+    # driver.execute_script("arguments[0].scrollIntoView(true);", computer_elektronica)
+    # ActionChains(driver).move_to_element(computer_elektronica).perform()
     computer_elektronica.click()
-    telefonie_tablets = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, f"//span[contains(text(), '{category}')]")))
+    # sleep(1)
+    try:
+        telefonie_tablets = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, f"//span[contains(text(), '{category}')]")))
+    except TimeoutException:
+        sleep(1)
+        telefonie_tablets = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, f"//span[contains(text(), '{category}')]")))
 
-        # ActionChains(driver).move_to_element(telefonie_tablets).perform()
+    # ActionChains(driver).move_to_element(telefonie_tablets).perform()
     telefonie_tablets.click()
     category_phone_str = f"//a[contains(text(), '{subcategory}')]"
     category_phone = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, category_phone_str)))
@@ -68,29 +85,55 @@ def navigate_to_category(category, subcategory):
     # sleep(randint(3,6))
     category_phone.click()
 
+def scrape_brands():
+    brands = []
+    more_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "a[data-analytics-tag='4842']")))
+    more_button.click()
+    dialog = WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "div[class='searchable-select__section']")))
+    for section in dialog:
+        # Find all the checkbox input elements
+        checkbox_inputs = section.find_elements(By.CSS_SELECTOR, '.searchable-select__item')
+        # Extract the options
+        new_brands = [checkbox.find_element(By.TAG_NAME, 'label').text for checkbox in checkbox_inputs]
+        brands += new_brands
+    dialog_close = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "div[class='js_close_modal_window modal__window--close-hitarea']")))
+    dialog_close.click()
+    return brands
+
+
 def crawl_product_from_category(category, subcategory):
     navigate_to_category(category, subcategory)
     flag_stop = False
-    phone_names = []
+    product_names = []
     phone_specs = []
     prices = []
     short_descs = []
     other_options = []
     ratings = []
+    brands_names = []
     
     # Scrape the desired information for each product
+    iter = 0
     while True:
         if flag_stop:
-            return category, phone_names, phone_specs, prices, ratings, short_descs, other_options
+            return category, product_names, phone_specs, prices, ratings, short_descs, other_options
         product_list = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".product-list")))
-        products = product_list.find_elements(By.CLASS_NAME, "product-item--row")
+        if iter == 0:
+            available_brands = scrape_brands()
+            print(available_brands)
+        try:
+            products = product_list.find_elements(By.CLASS_NAME, "product-item--row")
+        except StaleElementReferenceException:
+            products = product_list.find_elements(By.CLASS_NAME, "product-item--row")
         if (len(products) == 0):
             flag_stop = True
+            break
         for product in products:
             # Scrape phone name
-            phone_name, product_specs, main_price, rating, short_desc = "", "", "", "", ""
+            product_name, product_specs, main_price, rating, short_desc = "", "", "", "", ""
             try:
-                phone_name = product.find_element(By.CLASS_NAME, "product-title").text
+                brand_name = product.find_element(By.CLASS_NAME, 'product-creator').text
+                product_name = product.find_element(By.CLASS_NAME, "product-title").text
             
                 # Scrape product specifications 
                 product_specs = product.find_element(By.CLASS_NAME, "product-small-specs").text
@@ -109,8 +152,8 @@ def crawl_product_from_category(category, subcategory):
             # except StaleElementReferenceException:
             #     rating_div = driver.find_element(By.XPATH, "//span[@class='star-rating__rating']")
             #     rating = rating_div.get_attribute("aria-label") if rating_div else ""
-            except NoSuchElementException :
-                print("Some elements of product aren't available, setting to empty string")
+            except (StaleElementReferenceException, NoSuchElementException) as e:
+                # print("Some elements of product aren't available, setting to empty string")
                 pass
             try:
                 # Try to find the rollup element
@@ -128,10 +171,10 @@ def crawl_product_from_category(category, subcategory):
                 other_options.append(str(option))
 
             except (NoSuchElementException, StaleElementReferenceException) as error:
-                print("No rollup element available for this product.")
+                # print("No rollup element available for this product.")
                 other_options.append("")
-
-            phone_names.append(phone_name)
+            brands_names.append(brand_name)
+            product_names.append(product_name)
             phone_specs.append(product_specs)
             prices.append(main_price)
             ratings.append(rating)
@@ -145,17 +188,42 @@ def crawl_product_from_category(category, subcategory):
             flag_stop = True
             print("No next Button found")
             break
-        except ElementClickInterceptedException:
+        except (ElementClickInterceptedException, StaleElementReferenceException) as e:
             sleep(1)
-    return category, phone_names, phone_specs, prices, ratings, short_descs, other_options
+        iter += 1
+    return available_brands, brands_names, category, product_names, phone_specs, prices, ratings, short_descs, other_options
     
 
-# crawl_product_from_category('Apple iPhones')
+def build_pd_brands(brands, category):
+    last_idx = 0
+    try:
+        df = pd.read_csv('Data crawled/brands_computers_accessories.csv')
+        last_row = df.iloc[-1]
+        last_idx = int(last_row['brands_id'])
+    except FileNotFoundError:
+        pass
+    brands_pd = pd.DataFrame()
+    brands_pd['brands'] = brands
+    brand_mapping = {}
+    index = []
+    start = last_idx + 1
+    end = len(brands) + last_idx + 1
+    for i in range(start, end):
+        if i < 10:
+            index.append('0' + str(i))
+        else:
+            index.append(str(i))
+        brand_mapping[brands[i-start-1]] = i
+    brand_mapping[''] = None
+    brands_pd['brands_id'] = index
+    brands_pd['category_id'] = category_mapping[category]
+    print(brand_mapping)
+    return brands_pd, brand_mapping
 
 def build_pd_categories(subcategories):
-    brand = pd.DataFrame()
+    category = pd.DataFrame()
 
-    brand['category'] = subcategories
+    category['category'] = subcategories
     category_mapping = {}
 
     index = []
@@ -166,35 +234,50 @@ def build_pd_categories(subcategories):
             index.append(str(i))
         category_mapping[subcategories[i-1]] = i
 
-    brand['category_id'] = index
+    category['category_id'] = index
 
-    return brand, category_mapping
+    return category, category_mapping
 
-def build_to_product_data(category, phone_names, phone_specs, prices, ratings, short_descs, other_options, category_mapping):
+def build_to_product_data(brands, category, product_name, phone_specs, prices, ratings, short_descs, other_options, category_mapping):
     products = pd.DataFrame()
-    products['phone_names'] = phone_names
+    products['product_name'] = product_name
     products['phone_specs'] = phone_specs
     products['prices'] = prices
     products['ratings'] = ratings
     products['short_descs'] = short_descs
     products['other_options'] = other_options
     products['category_id'] = category_mapping[category]
+    brand_id = []
+    for brand in brands:
+        if brand == 'Merkloos':
+            brand = 'Merkloos / Sans marque'
+        if brand not in brand_mapping:
+            brand = ""
+        brand_id.append(brand_mapping[brand])
+    products['brand_id'] = brand_id
 
     return products
 
 brand_data, category_mapping = build_pd_categories(subcategories)
-# brand_data.to_csv('personal project/brands_computers.csv', index=False)
-# all_products = []
+print(category_mapping)
+# brand_data.to_csv('Data crawled/category_phones_tablets.csv', index=False)
+all_products = []
 for i, subcategory in enumerate(subcategories):
-    print(subcategories[i])
-    category, phone_names, phone_specs, prices, ratings, short_descs, other_options = crawl_product_from_category('Computers & Accessoires', subcategory)
-    products = build_to_product_data(subcategory, phone_names, phone_specs, prices, ratings, short_descs, other_options, category_mapping)
+    print('Subcategory', subcategories[i])
+    if subcategories[i] in ('Smartphones'):
+        continue
+    available_brands, brands, category, product_name, phone_specs, prices, ratings, short_descs, other_options = crawl_product_from_category('Telefonie & Tablets', subcategory)
+    brands_pd, brand_mapping = build_pd_brands(available_brands, subcategory)   
+    products = build_to_product_data(brands, subcategory, product_name, phone_specs, prices, ratings, short_descs, other_options, category_mapping)
     print('Appending to product')
     # all_products.append(products)
-    if i == 0:
-        products.to_csv('personal project/computers_accesories.csv', header=True, index=False)
+    if subcategories[i] == 'Laptops':
+        # pass
+        brands_pd.to_csv('Data crawled/brands_smartphones_tablets.csv', header=True, index=False)
+        products.to_csv('Data crawled/smartphones_tablets.csv', header=True, index=False)
     else:
-        products.to_csv('personal project/computers_accesories.csv', mode='a', header=False, index=False)
+        brands_pd.to_csv('Data crawled/brands_smartphones_tablets.csv', mode='a', header=False, index=False)
+        products.to_csv('Data crawled/smartphones_tablets.csv', mode='a', header=False, index=False)
 
 # all_products_df = pd.concat(all_products, ignore_index=True)
 # all_products_df.to_csv('computers_accesories.csv', index=False)

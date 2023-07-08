@@ -1,2 +1,5 @@
 Include
 Lib
+geckodriver.exe
+geckodriver.log
+Scripts

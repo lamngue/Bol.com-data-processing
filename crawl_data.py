@@ -43,10 +43,10 @@ def get_product_subcategories(target_product):
     subcategory_items = ul_element.find_elements(By.TAG_NAME, 'li')
     subcategories = []
     # Skipping a few categories due to different html format
-    for i in range (len(subcategory_items)):
+    for i in range (len(subcategory_items) - 1):
         subcategory_link = subcategory_items[i].find_element(By.TAG_NAME, 'a')
         subcategory_name = subcategory_link.get_attribute('text').strip()
-        # if (subcategory_name not in ['Telefonieaccessoires', 'Tablets', 'Tabletaccessoires', 'Tassen & Hoezen', 'Dataopslag', 'PC-Gaming', "Printers & Supplies", 'Netwerk & Internet','PC-Accessoires']):
+        # if (subcategory_name not in ['Telefonieaccessoires', 'Tablets', 'Tabletaccessoires', 'Tassen & Hoezen', 'Dataopslag', 'PC-Gaming', "Printers & Supplies", 'Netwerk & Internet','PC-Accessoires', "Componenten & Onderdelen"]):
         if (subcategory_name in ['Smartphones', 'Tablets', 'Vaste telefoons']):
             subcategories.append(subcategory_name)
 
@@ -197,9 +197,9 @@ def crawl_product_from_category(category, subcategory):
 def build_pd_brands(brands, category):
     last_idx = 0
     try:
-        df = pd.read_csv('Data crawled/brands_computers_accessories.csv')
-        last_row = df.iloc[-1]
-        last_idx = int(last_row['brands_id'])
+        df = pd.read_csv('Data crawled/brands_telephones_tablets.csv', delimiter=';')
+        print(df['brands_id'].iloc[-1])
+        last_idx = int(df['brands_id'].iloc[-1])
     except FileNotFoundError:
         pass
     brands_pd = pd.DataFrame()
@@ -260,24 +260,24 @@ def build_to_product_data(brands, category, product_name, phone_specs, prices, r
 
 brand_data, category_mapping = build_pd_categories(subcategories)
 print(category_mapping)
-# brand_data.to_csv('Data crawled/category_phones_tablets.csv', index=False)
+brand_data.to_csv('Data crawled/category_telephones_tablets.csv', index=False, sep=";")
 all_products = []
 for i, subcategory in enumerate(subcategories):
     print('Subcategory', subcategories[i])
-    if subcategories[i] in ('Smartphones'):
-        continue
+    # if subcategories[i] in ('Laptops'):
+    #     continue
     available_brands, brands, category, product_name, phone_specs, prices, ratings, short_descs, other_options = crawl_product_from_category('Telefonie & Tablets', subcategory)
     brands_pd, brand_mapping = build_pd_brands(available_brands, subcategory)   
     products = build_to_product_data(brands, subcategory, product_name, phone_specs, prices, ratings, short_descs, other_options, category_mapping)
     print('Appending to product')
     # all_products.append(products)
-    if subcategories[i] == 'Laptops':
+    if subcategories[i] == 'Smartphones':
         # pass
-        brands_pd.to_csv('Data crawled/brands_smartphones_tablets.csv', header=True, index=False)
-        products.to_csv('Data crawled/smartphones_tablets.csv', header=True, index=False)
+        brands_pd.to_csv('Data crawled/brands_telephones_tablets.csv', header=True, index=False, sep=';')
+        products.to_csv('Data crawled/telephones_tablets.csv', header=True, index=False, sep=';')
     else:
-        brands_pd.to_csv('Data crawled/brands_smartphones_tablets.csv', mode='a', header=False, index=False)
-        products.to_csv('Data crawled/smartphones_tablets.csv', mode='a', header=False, index=False)
+        brands_pd.to_csv('Data crawled/brands_telephones_tablets.csv', mode='a', header=False, index=False,  sep=';')
+        products.to_csv('Data crawled/telephones_tablets.csv', mode='a', header=False, index=False, sep=';')
 
 # all_products_df = pd.concat(all_products, ignore_index=True)
 # all_products_df.to_csv('computers_accesories.csv', index=False)

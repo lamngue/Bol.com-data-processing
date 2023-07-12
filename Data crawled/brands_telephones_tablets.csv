@@ -1,0 +1,288 @@
+brands;brands_id;category_id
+Alcatel;01;1
+Amplicomms;02;1
+Apple;03;1
+ASUS;04;1
+Bea-Fon;05;1
+Beafon;06;1
+Blackview;07;1
+Blaupunkt;08;1
+Cat;09;1
+Caterpillar;10;1
+CAT®;11;1
+Crosscall;12;1
+Cubot;13;1
+Cyrus;14;1
+DOOGEE;15;1
+Doro;16;1
+Emporia;17;1
+Energizer;18;1
+Fairphone;19;1
+Fysic;20;1
+Gigaset;21;1
+Google;22;1
+Google Pixel;23;1
+Hammer;24;1
+HAMMER H;25;1
+Honor;26;1
+Honor 20;27;1
+Hotwav;28;1
+Huawei;29;1
+i.safe-MOBILE;30;1
+iGET;31;1
+Krüger&Matz;32;1
+LG;33;1
+Logicom;34;1
+Maxcom;35;1
+Merkloos / Sans marque;36;1
+MG;37;1
+Microsoft;38;1
+Motorola;39;1
+Nokia;40;1
+Nothing;41;1
+Olympia;42;1
+OnePlus;43;1
+OnePlus 6T;44;1
+OPPO;45;1
+Oscal;46;1
+Oukitel;47;1
+Panasonic;48;1
+Poco;49;1
+Realme;50;1
+RedMi;51;1
+RugGear;52;1
+Samsung;53;1
+SeniorenTab;54;1
+Sharp;55;1
+SimPC;56;1
+Sony;57;1
+soyes;58;1
+SPC;59;1
+Swissvoice;60;1
+Syco;61;1
+TCL;62;1
+Top Systems;63;1
+Ulefone;64;1
+Umidigi;65;1
+Vivo;66;1
+Vodafone;67;1
+Xiaomi;68;1
+Xiaomi Poco;69;1
+Xiaomi Redmi;70;1
+ZTE;71;1
+Acer;72;2
+Achaté;73;2
+Aiwa;74;2
+Alcatel;75;2
+AngelTech;76;2
+Apple;77;2
+Archos;78;2
+Bea-Fon;79;2
+Beafon;80;2
+BenSlim;81;2
+Biboza;82;2
+Blackview;83;2
+bluedime;84;2
+Boox;85;2
+Bosstony;86;2
+Brightbrand;87;2
+BronStore;88;2
+Buzzle;89;2
+CB-Goods;90;2
+CosmoToys;91;2
+Cyrus;92;2
+Dailygoods;93;2
+Denver;94;2
+DEPLAY;95;2
+DOOGEE;96;2
+Doro;97;2
+Duoduogo;98;2
+DynaBright;99;2
+Eagle Electronics;100;2
+ElementKey;101;2
+Emporia;102;2
+Ermeco;103;2
+faytech;104;2
+Ferodelli;105;2
+Forexa;106;2
+Gødly;107;2
+HappyChild;108;2
+HRB Commerce;109;2
+Huawei;110;2
+Iconbit;111;2
+Imatch;112;2
+Intel;113;2
+Kurio;114;2
+Lenova;115;2
+Lenovo;116;2
+LIPA;117;2
+LitaLife;118;2
+Logicom;119;2
+Looki;120;2
+Lopup®;121;2
+LuKids;122;2
+LUVIQ;123;2
+MEDION;124;2
+Merkloos / Sans marque;125;2
+Microsoft;126;2
+No Isolation;127;2
+No Label;128;2
+Nokia;129;2
+Odys;130;2
+OnePlus;131;2
+OPPO;132;2
+ORDISSIMO;133;2
+Oukitel;134;2
+P&P Goods;135;2
+Pebble;136;2
+Pebble Gear;137;2
+Phonergy;138;2
+PlayToyz;139;2
+Polaroid;140;2
+Pora&co;141;2
+Prifora;142;2
+Pritom;143;2
+Realme;144;2
+Redline;145;2
+Relave;146;2
+Remarkable;147;2
+RevoKid;148;2
+RugGear;149;2
+Samsung;150;2
+SeniorenTab;151;2
+SGIN;152;2
+SimPC;153;2
+Souiri;154;2
+Spoused;155;2
+T Shops;156;2
+Tablet;157;2
+TCL;158;2
+TechU™;159;2
+Teclast;160;2
+Telpo;161;2
+Tennex;162;2
+TibaGoods;163;2
+TJD;164;2
+Ulefone;165;2
+Vankyo;166;2
+Veidoo;167;2
+Venoza®;168;2
+Voger;169;2
+Vulpes goods;170;2
+Winmate;171;2
+Xiaomi;172;2
+Xoro;173;2
+Xp-pen;174;2
+Zebra;175;2
+ZINLY;176;2
+'merkloos';177;3
+Aastra - Mitel;178;3
+AEG;179;3
+AGFEO;180;3
+Aidapt;181;3
+AKUVOX;182;3
+Alcatel;183;3
+Alphatech;184;3
+Amplicomms;185;3
+Audiocodes;186;3
+Auerswald;187;3
+Avaya;188;3
+AVM;189;3
+Barco;190;3
+Bellman & Symfon;191;3
+beyerdynamic;192;3
+Beyertone;193;3
+Bezet-Werk;194;3
+Bintec-elmeg;195;3
+Boompods;196;3
+Brother;197;3
+Cat;198;3
+Checktel;199;3
+Cisco;200;3
+ClearOne;201;3
+Commerce M;202;3
+Crosley;203;3
+Depaepe;204;3
+Digitus;205;3
+Doro;206;3
+Dosch & Amand;207;3
+Dunlop;208;3
+eibabo;209;3
+Fanvil;210;3
+fasttel;211;3
+FMN;212;3
+Fysic;213;3
+Geemarc;214;3
+Gembird;215;3
+Gigaset;216;3
+GPO;217;3
+Grandstream;218;3
+Grandstream Networks;219;3
+Hansawerke;220;3
+Helos;221;3
+Hewlett Packard Enterprise;222;3
+Horend Goed;223;3
+Huaptec;224;3
+Huawei;225;3
+Humantechnik;226;3
+Industcom;227;3
+ISPT;228;3
+Jabra;229;3
+Jacob Jensen;230;3
+Konftel;231;3
+Kräcker;232;3
+Kuando;233;3
+Logicom;234;3
+Logitech;235;3
+m-e;236;3
+Maxcom;237;3
+MEDIA PLUS;238;3
+Mercusys;239;3
+Merkloos / Sans marque;240;3
+Message To The Moon;241;3
+METZ CONNECT;242;3
+Microsoft;243;3
+Mitel;244;3
+Motorola;245;3
+Nexvoo;246;3
+NGS;247;3
+Opis;248;3
+Opis Technology;249;3
+Orchid;250;3
+Orchid Telecom;251;3
+Panasonic;252;3
+Panasonic Corp.;253;3
+Patton;254;3
+Philips;255;3
+Phonak;256;3
+PhonicEar;257;3
+Plantronics;258;3
+Poly;259;3
+Polycom;260;3
+Profoon;261;3
+Radius;262;3
+Reiner;263;3
+Renkforce;264;3
+S-Impuls;265;3
+Sandberg;266;3
+Sennheiser;267;3
+Snom;268;3
+SPC;269;3
+STS;270;3
+superfone;271;3
+Swissvoice;272;3
+Syco;273;3
+Teleline;274;3
+Thomson;275;3
+Tiptel;276;3
+TZ;277;3
+Unify;278;3
+Vaddio;279;3
+Vidicode;280;3
+Viking Electronics;281;3
+Widex;282;3
+Wild & Wolf;283;3
+Wild+Wolf;284;3
+Yamaha Music;285;3
+Yealink;286;3
+Zyxel;287;3

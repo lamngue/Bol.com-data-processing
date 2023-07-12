@@ -1,446 +1,454 @@
-brands,brands_id,category_id
-Acer,01,1
-Acer Computers,02,1
-Acer LiteON,03,1
-Alienware,04,1
-Alienware 17 R2,05,1
-Apple,06,1
-ASU,07,1
-ASUS,08,1
-Asus rog,09,1
-Asus Rog Strix,10,1
-Avita,11,1
-Blauw,12,1
-BTO,13,1
-Clevo,14,1
-Concept,15,1
-ConceptD,16,1
-Dell,17,1
-Dynabook,18,1
-Dynabook Toshiba,19,1
-ElementKey,20,1
-FD-Computers,21,1
-Fujitsu,22,1
-GIGABYTE,23,1
-Hewlet Packard,24,1
-Hewlett Packard Enterprise,25,1
-HP,26,1
-HP Envy,27,1
-HP Pavilion,28,1
-Hp Printing & Computing,29,1
-Jumper,30,1
-Lenovo,31,1
-Lenovo thinkpad carbon gen 10,32,1
-Lenovo thinkpad x1 yoga gen 6,33,1
-Lenvo,34,1
-MEDION,35,1
-Merkloos / Sans marque,36,1
-Microsoft,37,1
-MSI,38,1
-NovaCustom,39,1
-PC Basic,40,1
-PEAQ,41,1
-Razer,42,1
-Redux Gaming,43,1
-Samsung,44,1
-SGIN,45,1
-Skikk,46,1
-Stampin Storage,47,1
-Terra,48,1
-TongFang,49,1
-Toshiba,50,1
-Wortmann AG,51,1
-Xiaomi Mi,52,1
-,53,2
-AG Neovo,54,2
-Alienware,55,2
-ANTGAMER,56,2
-AntteQ,57,2
-AOC,58,2
-APC,59,2
-Apple,60,2
-AquaSound,61,2
-Arzopa,62,2
-Asrock,63,2
-ASUS,64,2
-Atomos,65,2
-Believe,66,2
-BenQ,67,2
-Blerron,68,2
-Boox,69,2
-Capsy,70,2
-chiq,71,2
-Cisco,72,2
-Cooler Master,73,2
-Dahua,74,2
-Dell,75,2
-Denver,76,2
-DESVIEW,77,2
-Eaton,78,2
-Eizo,79,2
-Elo,80,2
-Elo Touch Solution,81,2
-Elo Touchsystems,82,2
-Ermeco,83,2
-Eviciv,84,2
-Evoko,85,2
-farfi,86,2
-faytech,87,2
-Feare NL,88,2
-Fujitsu,89,2
-Game Hero,90,2
-game scherm,91,2
-Gamecase Design,92,2
-Gearlab,93,2
-GIGABYTE,94,2
-GMI,95,2
-Hanns.G,96,2
-Hannspree,97,2
-Hikvision,98,2
-Hisense,99,2
-Hitachi,100,2
-HoriVue,101,2
-HP,102,2
-Huawei,103,2
-Iiyama,104,2
-Intel,105,2
-KeepOut,106,2
-Kualite,107,2
-Lc-Power,108,2
-Legamaster,109,2
-Lenovo,110,2
-LG,111,2
-LIPA,112,2
-Logilink,113,2
-LOOV,114,2
-MEDION,115,2
-Merkloos / Sans marque,116,2
-Mobile Pixels,117,2
-Monitor,118,2
-Motorola,119,2
-MSI,120,2
-Mucai,121,2
-NEC,122,2
-Neewer,123,2
-Neovo,124,2
-Newline Interactive,125,2
-Oversteel,126,2
-Pariot,127,2
-PEPPER JOBS,128,2
-Perfect,129,2
-Philips,130,2
-Powerview,131,2
-Premes,132,2
-Qumax,133,2
-Raider,134,2
-Raspberry Pi,135,2
-Razer,136,2
-Renkforce,137,2
-Safire,138,2
-Samsung,139,2
-Sharp,140,2
-Sony,141,2
-Stane,142,2
-Tennex,143,2
-Terra,144,2
-Tesla,145,2
-Thomson,146,2
-Tri-screen,147,2
-Tru Components,148,2
-V7,149,2
-Veho,150,2
-Velleman,151,2
-Verbatim,152,2
-Viewsonic,153,2
-Vivvy,154,2
-VoCore,155,2
-Xebec,156,2
-Xiaomi,157,2
-Yealink,158,2
-Zazitec,159,2
-Zowie,160,2
-123pccenter,161,3
-Acer,162,3
-AMD Power Game PC,163,3
-Apple,164,3
-Asrock,165,3
-ASUS,166,3
-Azerty,167,3
-Badiko,168,3
-Beelink,169,3
-Bleu Jour,170,3
-Blue Monkey,171,3
-Bobcat 300,172,3
-BOEM,173,3
-COMPUCOM,174,3
-COMPUGEAR,175,3
-Compuserv Beast for budget,176,3
-CompuStunt,177,3
-Computer Galaxy,178,3
-Concept,179,3
-Dell,180,3
-Dell Wyse,181,3
-DT Performance Builds,182,3
-Ecs,183,3
-ECS Elitegroup,184,3
-ElementKey,185,3
-EpicBuilds,186,3
-FD-Computers,187,3
-FICEP,188,3
-Fujitsu,189,3
-Giada,190,3
-GIGABYTE,191,3
-GMR,192,3
-H.P.,193,3
-Hewlet Packard,194,3
-Hewlett Packard Enterprise,195,3
-HP,196,3
-HP ProMini,197,3
-Huawei,198,3
-HW,199,3
-Icy Box,200,3
-Igel,201,3
-Informatique,202,3
-Intel,203,3
-Intel NUC Compleet,204,3
-Intel NUC PC,205,3
-Intel Power Game PC,206,3
-Kooiker Automatisering,207,3
-LalaShops,208,3
-Lc-Power,209,3
-Lenovo,210,3
-LIPA,211,3
-MatchX,212,3
-MEDION,213,3
-Merkloos / Sans marque,214,3
-Milesight,215,3
-miniPCWINKEL,216,3
-Morefine,217,3
-MSI,218,3
-NEC,219,3
-omiXimo,220,3
-Option,221,3
-PC Build,222,3
-PCAlly,223,3
-pcman,224,3
-Peta,225,3
-QNAP,226,3
-Raider,227,3
-REBELPLAY,228,3
-Rebelz Gaming,229,3
-Redux Gaming,230,3
-Rikomagic,231,3
-ScreenON,232,3
-SHS Computer,233,3
-Shuttle,234,3
-SiComputers,235,3
-SimPC,236,3
-Skikk,237,3
-SMART Technologies,238,3
-Terra,239,3
-TerraCom,240,3
-U-Gen Gaming,241,3
-Vertiv,242,3
-Western Digital,243,3
-Wortmann AG,244,3
-Xgaming,245,3
-Acer,246,4
-Add To Life,247,4
-AFINTEK,248,4
-AJGR,249,4
-Anker,250,4
-Apeman,251,4
-AS-Q9,252,4
-Astarite,253,4
-Auna,254,4
-Auronic,255,4
-BeamPRO,256,4
-Belesy,257,4
-BenQ,258,4
-Bradedos,259,4
-byintek,260,4
-Carefree Products,261,4
-CB-Goods,262,4
-Chesto,263,4
-Clear Choice,264,4
-Cless,265,4
-Dailygoods,266,4
-Dangbei,267,4
-De Snoezel Fabriek,268,4
-Dell,269,4
-DrPhone,270,4
-ElementKey,271,4
-Elite Elements,272,4
-Epson,273,4
-Feare NL,274,4
-Fuegobird,275,4
-fundigo,276,4
-GOCLEVER,277,4
-Hisense,278,4
-Homezie,279,4
-HOTUS,280,4
-Hozie,281,4
-HP,282,4
-Igoods,283,4
-iMoshion,284,4
-In Round,285,4
-Infocus,286,4
-ISINBOX,287,4
-Ivisions,288,4
-Knikker,289,4
-KROMS,290,4
-Krüger&Matz,291,4
-Laville,292,4
-Lenco,293,4
-LG,294,4
-LIPA,295,4
-LiveBetter,296,4
-Looki,297,4
-Lumbit,298,4
-Mecool,299,4
-Merkloos / Sans marque,300,4
-Mobax,301,4
-MQ19,302,4
-Nince,303,4
-Novoz,304,4
-Optoma,305,4
-Overmax,306,4
-Owlenz,307,4
-Philips,308,4
-Phonergy,309,4
-Quality4less,310,4
-Reevi,311,4
-Relave,312,4
-Relicᴜs,313,4
-Renkforce,314,4
-RevoKid,315,4
-Romas,316,4
-Romas®,317,4
-ROYAL SPACIUS,318,4
-Salora,319,4
-Samsung,320,4
-Sanbo,321,4
-SelectGoodz,322,4
-SEZGoods,323,4
-Sightstrong,324,4
-Silvergear,325,4
-Spoused,326,4
-STAEDTLER,327,4
-Stereoboomm,328,4
-STOBE®,329,4
-Strex,330,4
-STYK Audio,331,4
-SupriseNL,332,4
-Technaxx,333,4
-Thuys,334,4
-TKMARS,335,4
-Unilight,336,4
-UpLiving,337,4
-Vankyo,338,4
-VAVA,339,4
-Viewsonic,340,4
-vivicine,341,4
-Vivid Green,342,4
-VIVITEK,343,4
-Welley,344,4
-WiMiUs,345,4
-Winnes,346,4
-WiseGoods,347,4
-Wiselazer,348,4
-Xd Xtreme,349,4
-XGIMI,350,4
-Xiaomi,351,4
-YABER,352,4
-Yoton,353,4
-A.W. Bruna,354,5
-ABBYY,355,5
-Acronis,356,5
-Adobe,357,5
-attiny digispark,358,5
-Aurolog,359,5
-Avast,360,5
-Bannink,361,5
-Bitdefender,362,5
-Bridge Beter Software,363,5
-Bullguard,364,5
-Ciel,365,5
-Cisco,366,5
-Corel,367,5
-CorelDRAW,368,5
-Cyberlink,369,5
-Data Becker,370,5
-Davilex,371,5
-Dell,372,5
-Dell Wyse,373,5
-Denda Games,374,5
-DigitaleFotografie.nu,375,5
-Drone Flight Academy,376,5
-E.M.L. - Online Education B.V.,377,5
-Easy Computing,378,5
-Educontract,379,5
-emleducation.com,380,5
-ESET,381,5
-F-Secure,382,5
-FL STUDIO,383,5
-G Data,384,5
-Gembird,385,5
-Handleiding Spraakherkenning,386,5
-Hewlett Packard Enterprise,387,5
-HPE,388,5
-IntoWords,389,5
-IPVanish,390,5
-Karakter Interactive,391,5
-Kaspersky,392,5
-Kensington,393,5
-Knowdis,394,5
-Leertheorie,395,5
-Lenovo,396,5
-Lens Verkeersleermiddelen,397,5
-Life tools by life coach sandrine,398,5
-Lifestyle Monitors,399,5
-linux,400,5
-linux-mint,401,5
-Livedrive,402,5
-Magix,403,5
-McAfee,404,5
-Mensys SEPA Software,405,5
-Merkloos / Sans marque,406,5
-Micro Application,407,5
-Microsoft,408,5
-Microsoft Windows,409,5
-Nero,410,5
-Nero®,411,5
-NordVPN,412,5
-Norton,413,5
-NortonLifeLock,414,5
-Nuance,415,5
-OEM Office ELearning Menu,416,5
-Panda,417,5
-Parallels,418,5
-Pinnacle,419,5
-Pratic,420,5
-Riddle,421,5
-Roxio,422,5
-Samsung,423,5
-Sigel,424,5
-Softkey,425,5
-Spelenderwijs,426,5
-Stellar,427,5
-Studio Master Video,428,5
-Synology,429,5
-The Electric Quilt Company,430,5
-tiktop,431,5
-Trend Micro,432,5
-Trend Micro Internet Security,433,5
-Trimble,434,5
-Trips in the Cloud,435,5
-TypeApp,436,5
-ubuntushop,437,5
-unknow,438,5
-Vegas,439,5
-Velleman,440,5
-Vipre,441,5
-Westra on Bridge,442,5
-Windows,443,5
-woord voor woord,444,5
-Zebra,445,5
+brands;brands_id;category_id
+Acer;01;1
+Acer Computers;02;1
+Acer LiteON;03;1
+Alienware;04;1
+Alienware 17 R2;05;1
+Apple;06;1
+ASU;07;1
+ASUS;08;1
+Asus rog;09;1
+Asus Rog Strix;10;1
+Avita;11;1
+Blauw;12;1
+BTO;13;1
+Clevo;14;1
+Concept;15;1
+ConceptD;16;1
+Dell;17;1
+Dynabook;18;1
+Dynabook Toshiba;19;1
+ElementKey;20;1
+Fujitsu;21;1
+GIGABYTE;22;1
+Hewlet Packard;23;1
+Hewlett Packard Enterprise;24;1
+HP;25;1
+HP Envy;26;1
+HP Pavilion;27;1
+Hp Printing & Computing;28;1
+Jumper;29;1
+LalaShops;30;1
+Lenovo;31;1
+Lenovo Legion 5;32;1
+Lenovo thinkpad carbon gen 10;33;1
+Lenovo thinkpad x1 yoga gen 6;34;1
+Lenvo;35;1
+MEDION;36;1
+Merkloos / Sans marque;37;1
+Microsoft;38;1
+MSI;39;1
+NovaCustom;40;1
+PC Basic;41;1
+PEAQ;42;1
+Razer;43;1
+Redux Gaming;44;1
+Samsung;45;1
+Skikk;46;1
+Terra;47;1
+TongFang;48;1
+Toshiba;49;1
+Wortmann AG;50;1
+Xiaomi Mi;51;1
+Acer;52;2
+AG Neovo;53;2
+Alienware;54;2
+ANTGAMER;55;2
+AntteQ;56;2
+AOC;57;2
+APC;58;2
+Apple;59;2
+AquaSound;60;2
+Arzopa;61;2
+Asrock;62;2
+ASUS;63;2
+Atomos;64;2
+Believe;65;2
+BenQ;66;2
+Blerron;67;2
+Boox;68;2
+chiq;69;2
+Cisco;70;2
+Cooler Master;71;2
+Dahua;72;2
+Dell;73;2
+Denver;74;2
+DESVIEW;75;2
+Eaton;76;2
+Eizo;77;2
+Elo;78;2
+Elo Touch Solution;79;2
+Elo Touchsystems;80;2
+Ermeco;81;2
+Eviciv;82;2
+Evoko;83;2
+farfi;84;2
+faytech;85;2
+Feare NL;86;2
+Fujitsu;87;2
+Game Hero;88;2
+game scherm;89;2
+Gamecase Design;90;2
+Gearlab;91;2
+GIGABYTE;92;2
+GMI;93;2
+Hanns.G;94;2
+Hannspree;95;2
+Hikvision;96;2
+Hisense;97;2
+Hitachi;98;2
+HoriVue;99;2
+HP;100;2
+Huawei;101;2
+Iiyama;102;2
+Intel;103;2
+Intellecto;104;2
+KeepOut;105;2
+Koorui;106;2
+Kualite;107;2
+Lc-Power;108;2
+Legamaster;109;2
+Lenovo;110;2
+LG;111;2
+LIPA;112;2
+Logilink;113;2
+LOOV;114;2
+MEDION;115;2
+Merkloos / Sans marque;116;2
+Mobile Pixels;117;2
+Monitor;118;2
+MP My Panny;119;2
+MSI;120;2
+Mucai;121;2
+NEC;122;2
+Neewer;123;2
+Neovo;124;2
+Newline Interactive;125;2
+Oversteel;126;2
+Pactom;127;2
+PEPPER JOBS;128;2
+Perfect;129;2
+Philips;130;2
+Powerview;131;2
+Premes;132;2
+Qumax;133;2
+Raider;134;2
+Rampage;135;2
+Raspberry Pi;136;2
+Razer;137;2
+Renkforce;138;2
+Safire;139;2
+Samsung;140;2
+Sharp;141;2
+Sony;142;2
+Stane;143;2
+Targus;144;2
+Tennex;145;2
+Terra;146;2
+Tesla;147;2
+Thomson;148;2
+Tri-screen;149;2
+Tru Components;150;2
+ULTRA GEAR;151;2
+V7;152;2
+Veho;153;2
+Velleman;154;2
+Verbatim;155;2
+Viewsonic;156;2
+Vivvy;157;2
+VoCore;158;2
+Xebec;159;2
+Xiaomi;160;2
+Yealink;161;2
+Zazitec;162;2
+Zowie;163;2
+123pccenter;164;3
+Acer;165;3
+AMD Power Game PC;166;3
+Apple;167;3
+Asrock;168;3
+ASUS;169;3
+Azerty;170;3
+Badiko;171;3
+Beelink;172;3
+Bleu Jour;173;3
+Bleujour;174;3
+Blue Monkey;175;3
+Bobcat 300;176;3
+BOEM;177;3
+COMPUCOM;178;3
+COMPUGEAR;179;3
+Compuserv Beast for budget;180;3
+CompuStunt;181;3
+Computer Galaxy;182;3
+Concept;183;3
+Dell;184;3
+Dell Wyse;185;3
+DT Performance Builds;186;3
+Ecs;187;3
+ECS Elitegroup;188;3
+ElementKey;189;3
+EpicBuilds;190;3
+FD-Computers;191;3
+FICEP;192;3
+Fujitsu;193;3
+Giada;194;3
+GIGABYTE;195;3
+GMR;196;3
+H.P.;197;3
+Hewlet Packard;198;3
+Hewlett Packard Enterprise;199;3
+HP;200;3
+HP ProMini;201;3
+HPE;202;3
+Huawei;203;3
+HW;204;3
+Icy Box;205;3
+Igel;206;3
+Informatique;207;3
+Intel;208;3
+Intel NUC Compleet;209;3
+Intel NUC PC;210;3
+Intel Power Game PC;211;3
+Kooiker Automatisering;212;3
+LalaShops;213;3
+Lc-Power;214;3
+Lenovo;215;3
+LIPA;216;3
+MatchX;217;3
+MEDION;218;3
+Merkloos / Sans marque;219;3
+Milesight;220;3
+miniPCWINKEL;221;3
+Morefine;222;3
+MSI;223;3
+NEC;224;3
+omiXimo;225;3
+Option;226;3
+PC Build;227;3
+pcman;228;3
+Peta;229;3
+QNAP;230;3
+Raider;231;3
+REBELPLAY;232;3
+Rebelz Gaming;233;3
+Redux Gaming;234;3
+Rikomagic;235;3
+ScreenON;236;3
+SHS Computer;237;3
+Shuttle;238;3
+SimPC;239;3
+Skikk;240;3
+SMART Technologies;241;3
+StayPowered;242;3
+Terra;243;3
+TerraCom;244;3
+U-Gen Gaming;245;3
+Vertiv;246;3
+VTC;247;3
+Western Digital;248;3
+Wortmann AG;249;3
+Xgaming;250;3
+Acer;251;4
+Add To Life;252;4
+AFINTEK;253;4
+AJGR;254;4
+Anker;255;4
+Apeman;256;4
+AS-Q9;257;4
+Astarite;258;4
+Auna;259;4
+Auronic;260;4
+BeamPRO;261;4
+Belesy;262;4
+BenQ;263;4
+Bradedos;264;4
+byintek;265;4
+Carefree Products;266;4
+CB-Goods;267;4
+Chesto;268;4
+Clear Choice;269;4
+Cless;270;4
+Dailygoods;271;4
+Dangbei;272;4
+De Snoezel Fabriek;273;4
+Dell;274;4
+DrPhone;275;4
+EarKings;276;4
+ElementKey;277;4
+Elite Elements;278;4
+Epson;279;4
+Feare NL;280;4
+Fuegobird;281;4
+fundigo;282;4
+GOCLEVER;283;4
+Hisense;284;4
+Homezie;285;4
+HOTUS;286;4
+HP;287;4
+Igoods;288;4
+iMoshion;289;4
+In Round;290;4
+Infocus;291;4
+Intellecto;292;4
+ISINBOX;293;4
+Ivisions;294;4
+Knikker;295;4
+KROMS;296;4
+Krüger&Matz;297;4
+Laville;298;4
+Lenco;299;4
+LG;300;4
+LIPA;301;4
+LiveBetter;302;4
+Looki;303;4
+Lumbit;304;4
+Mecool;305;4
+Merkloos / Sans marque;306;4
+Mobax;307;4
+MQ19;308;4
+Nince;309;4
+Novoz;310;4
+Optoma;311;4
+Overmax;312;4
+Owlenz;313;4
+Philips;314;4
+Phonergy;315;4
+Quality4less;316;4
+Reevi;317;4
+Relave;318;4
+Relicᴜs;319;4
+Renkforce;320;4
+RevoKid;321;4
+Romas;322;4
+Romas®;323;4
+ROYAL SPACIUS;324;4
+Salora;325;4
+Samsung;326;4
+Sanbo;327;4
+SelectGoodz;328;4
+SEZGoods;329;4
+Sightstrong;330;4
+Silvergear;331;4
+Spoused;332;4
+STAEDTLER;333;4
+StayPowered;334;4
+Stereoboomm;335;4
+STOBE®;336;4
+Strex;337;4
+STYK Audio;338;4
+SupriseNL;339;4
+Technaxx;340;4
+Thuys;341;4
+TKMARS;342;4
+Toptro;343;4
+Unilight;344;4
+UpLiving;345;4
+Vankyo;346;4
+VAVA;347;4
+Viewsonic;348;4
+vivicine;349;4
+Vivid Green;350;4
+VIVITEK;351;4
+Welley;352;4
+WiMiUs;353;4
+Winnes;354;4
+WiseGoods;355;4
+Wiselazer;356;4
+Xd Xtreme;357;4
+XGIMI;358;4
+Xiaomi;359;4
+YABER;360;4
+Yoton;361;4
+A.W. Bruna;362;5
+ABBYY;363;5
+Acronis;364;5
+Adobe;365;5
+attiny digispark;366;5
+Aurolog;367;5
+Avast;368;5
+Bannink;369;5
+Bitdefender;370;5
+Blackmagic;371;5
+Bridge Beter Software;372;5
+Bullguard;373;5
+Ciel;374;5
+Cisco;375;5
+Corel;376;5
+CorelDRAW;377;5
+Cyberlink;378;5
+Data Becker;379;5
+Davilex;380;5
+Dell;381;5
+Dell Wyse;382;5
+Denda Games;383;5
+DigitaleFotografie.nu;384;5
+Drone Flight Academy;385;5
+E.M.L. - Online Education B.V.;386;5
+Easy Computing;387;5
+Educontract;388;5
+Elephant;389;5
+emleducation.com;390;5
+ESET;391;5
+F-Secure;392;5
+FL STUDIO;393;5
+G Data;394;5
+Gembird;395;5
+Handleiding Spraakherkenning;396;5
+Hewlett Packard Enterprise;397;5
+HPE;398;5
+IntoWords;399;5
+IPVanish;400;5
+Karakter Interactive;401;5
+Kaspersky;402;5
+Kensington;403;5
+Knowdis;404;5
+Leertheorie;405;5
+Lenovo;406;5
+Lens Verkeersleermiddelen;407;5
+Life tools by life coach sandrine;408;5
+Lifestyle Monitors;409;5
+linux;410;5
+linux-mint;411;5
+Livedrive;412;5
+Magix;413;5
+McAfee;414;5
+Mensys SEPA Software;415;5
+Merkloos / Sans marque;416;5
+Micro Application;417;5
+Microsoft;418;5
+Microsoft Windows;419;5
+Nero;420;5
+Nero®;421;5
+NordVPN;422;5
+Norton;423;5
+NortonLifeLock;424;5
+Nuance;425;5
+OEM Office ELearning Menu;426;5
+Panda;427;5
+Parallels;428;5
+Pinnacle;429;5
+Pratic;430;5
+Riddle;431;5
+Roxio;432;5
+Samsung;433;5
+Sigel;434;5
+Softkey;435;5
+Stellar;436;5
+Studio Master Video;437;5
+Synology;438;5
+The Electric Quilt Company;439;5
+tiktop;440;5
+Trend Micro;441;5
+Trend Micro Internet Security;442;5
+Trimble;443;5
+Trips in the Cloud;444;5
+TypeApp;445;5
+ubuntushop;446;5
+unknow;447;5
+Vegas;448;5
+Vipre;449;5
+Westra on Bridge;450;5
+Windows;451;5
+woord voor woord;452;5
+Zebra;453;5
